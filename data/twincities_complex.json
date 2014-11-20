@@ -1,0 +1,213 @@
+{
+    "twincities": [
+        {
+            "pair": {
+                "USA": {
+                    "City": "San Diego, USA",
+                    "latitude": 32.715738,
+                    "longitude": -117.161084
+                },
+                "Mex": {
+                    "City": "Tijuana, Mexico",
+                    "latitude": 32.514947,
+                    "longitude": -117.038247
+                }
+                
+            }
+        },
+        {
+            "pair": {
+                "USA":{
+                    "City": "Calexico, USA",
+                    "latitude": 32.678948,
+                    "longitude": -115.498883
+                },
+                "Mex":{
+                    "City": "Mexicali, Mexico",
+                    "latitude": 32.624539,
+                    "longitude": -115.452262
+                }
+                
+            }
+        },
+        {
+            "pair": {
+                "USA":{
+                    "City": "Yuma, USA",
+                    "latitude": 32.692651,
+                    "longitude": -114.627692
+                },
+                "Mex":{
+                    "City": "San Luis Rio Colorado, Mexico",
+                    "latitude": 32.451888,
+                    "longitude": -114.771711
+                }
+                
+            }
+        },
+        {
+            "pair": {
+                "USA":{
+                    "City": "Nogales, USA",
+                    "latitude": 31.340378,
+                    "longitude": -110.934253
+                },
+                "Mex":{
+                    "City": "Nogales, Mexico",
+                    "latitude": 31.301186,
+                    "longitude": -110.938105
+                }
+                
+            }
+        },
+        {
+            "pair": {
+                "USA":{
+                    "City": "Naco, USA",
+                    "latitude": 31.33538,
+                    "longitude": -109.94813
+                },
+                "Mex":{
+                    "City": "Naco, Mexico",
+                    "latitude": 31.326027,
+                    "longitude": -109.947002
+                }
+                
+            }
+        },
+        {
+            "pair": {
+                "USA":{
+                    "City": "Douglas, USA",
+                    "latitude": 31.508807,
+                    "longitude": -82.849865
+                },
+                "Mex":{
+                    "City": "Agua Prieta, Mexico",
+                    "latitude": 31.322085,
+                    "longitude": -109.541316
+                }
+                
+            }
+        },
+        {
+            "pair": {
+                "USA":{
+                    "City": "Columbus, USA",
+                    "latitude": 39.961176,
+                    "longitude": -82.998794
+                },
+                "Mex":{
+                    "City": "Puerto Palmoas, Mexico",
+                    "latitude": 31.780876,
+                    "longitude": -107.630908
+                }
+                
+            }
+        },
+        {
+            "pair": {
+                "USA":{
+                    "City": "El Paso, USA",
+                    "latitude": 31.777576,
+                    "longitude": -106.442456
+                },
+                "Mex":{
+                    "City": "Ciudad Juarez, Mexico",
+                    "latitude": 31.690364,
+                    "longitude": -106.424548
+                }
+                
+            }
+        },
+        {
+            "pair": {
+                "USA":{
+                    "City": "Presidio, USA",
+                    "latitude": 29.560738,
+                    "longitude": -104.372146
+                },
+                "Mex":{
+                    "City": "Ojinaga, Mexico",
+                    "latitude": 29.564444,
+                    "longitude": -104.416389
+                }
+                
+            }
+        },
+        {
+            "pair": {
+                "USA":{
+                    "City": "Del Rio, USA",
+                    "latitude": 29.370886,
+                    "longitude": -100.895867
+                },
+                "Mex":{
+                    "City": "Ciudad Acuna, Mexico",
+                    "latitude": 29.323296,
+                    "longitude": -100.951419
+                }
+                
+            }
+        },
+        {
+            "pair": {
+                "USA":{
+                    "City": "Eagle Pass, USA",
+                    "latitude": 28.709143,
+                    "longitude": -100.499521
+                },
+                "Mex":{
+                    "City": "Piedras Negras, Mexico",
+                    "latitude": 28.7,
+                    "longitude": -100.523056
+                }
+                
+            }
+        },
+        {
+            "pair": {
+                "USA":{
+                    "City": "Laredo, USA",
+                    "latitude": 27.530567,
+                    "longitude": -99.480324
+                },
+                "Mex":{
+                    "City": "Nuevo Laredo, Mexico",
+                    "latitude": 27.477936,
+                    "longitude": -99.549573
+                }
+                
+            }
+        },
+        {
+            "pair": {
+                "USA":{
+                    "City": "McAllen, USA",
+                    "latitude": 26.203407,
+                    "longitude": -98.230012
+                },
+                "Mex":{
+                    "City": "Reynosa, Mexico",
+                    "latitude": 26.092222,
+                    "longitude": -98.277778
+                }
+                
+            }
+        },
+        {
+            "pair": {
+                "USA":{
+                    "City": "Matamoros, USA",
+                    "latitude": 25.869029,
+                    "longitude": -97.502738
+                },
+                "Mex":{
+                    "City": "Brownsville, Mexico",
+                    "latitude": 25.901747,
+                    "longitude": -97.497484
+                }
+            }
+        }
+    ]
+}

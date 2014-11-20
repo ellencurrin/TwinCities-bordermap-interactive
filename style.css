@@ -1,0 +1,23 @@
+h4{padding: 0px; margin: 0px;}
+
+.x-scroll {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    height: 250px;
+    white-space:nowrap
+}
+
+.photo-row {
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.tooltip { position:absolute;
+	width: 145px;
+	padding: 5px;
+	border: 1px solid gray;
+	font-size: 9pt;
+	font-family: Verdana;
+	background-color: #fff;
+	color: #000;
+}

@@ -1,12 +1,14 @@
 var latlngArray = []
 var citiesObj={}
 var image
-var USCity = "BorderUSA"
-var MexicoCity = "BorderMexico"
+var USCity = "USBorder"
+var MexicoCity = "MexicoBorder"
 
 
 $(document).ready(function(){
 	console.log("ready!");
+	instagram(USCity, MexicoCity)
+	twitter(USCity, MexicoCity)
 	loadTwinCities()
 });
 
@@ -36,6 +38,7 @@ function initialize() {
  
   //var center, i
   var marker, i
+  var infowindow
   var centerPts = []
   var markers = []
   var styles = [
@@ -91,37 +94,18 @@ function initialize() {
           map: map,
           icon: 'images/marker3.png',
           title: citiesObj[i].City + ' (USA) // ' + citiesObj[i+1].City + ' (Mexico)',
-	  tooltip: '<p>Sample Tooltip</p>',
         });
-	//marker.set("id",i/2)
-	//console.log("id=" + marker.id)
+	infowindow = new google.maps.InfoWindow({
+			content: marker.title
+		      });
+	marker.set('id', i)
 	
-	/*var tooltip = new Tooltip({map: map}, marker);
-        tooltip.bindTo("text", marker, "tooltip");
-        google.maps.event.addListener(marker, 'mouseover', function() {
-            tooltip.addTip();
-            tooltip.getPos2(marker.getPosition());
-        });
-	google.maps.event.addListener(marker, 'mouseout', function() {
-            tooltip.removeTip();
-        });*/
 	
+	setSearch(marker, i);
 	
         centerPts.push(marker);
 	
-	google.maps.event.addListener(marker, 'click', function(click) {
-		map.setZoom(12);
-		map.setCenter(click.latLng);
-		console.log(i)
-		//set variables for Twitter and Instagram searches
-		USCity = 'USA'
-		console.log(USCity);
-		MexicoCity = 'Mexico'
-		instagram(USCity, MexicoCity)
-		
-		//TwitterFunction()
-		
-	});
+	
 	
         google.maps.event.addListener(map, 'zoom_changed', function() {
                 var zoom = map.getZoom();
@@ -130,6 +114,29 @@ function initialize() {
                     centerPts[i].setVisible(zoom < 9);
                 }
         });
+  }
+  
+  function setSearch(marker, num) {
+		
+		
+		google.maps.event.addListener(marker, 'mouseover', function() {
+			//alert(this.infowindow)
+			infowindow.open(marker.get('map'), marker);
+		});
+		google.maps.event.addListener(marker, 'mouseout', function() {
+			infowindow.close(marker.get('map'), marker);
+		});
+		
+		google.maps.event.addListener(marker, 'click', function(click) {
+			map.setZoom(11);
+			map.setCenter(click.latLng);
+			alert(this.title)
+			var i = this.id
+			USCity = citiesObj[i].Search
+			MexicoCity = citiesObj[i+1].Search
+			instagram(USCity, MexicoCity)
+			twitter(USCity, MexicoCity)	
+		});
   }
 
   google.maps.event.addListener(map, 'zoom_changed', function() {
@@ -182,9 +189,9 @@ function instagram(){
 			html += '<img src ="' + data.images.low_resolution.url + '" style="width: 250px; padding: 15px; display: inline">'
 		});
 		
-		$("#results").append(html);
-		var titleUS= "#" + USCity
-		$("#titleUS").append(titleUS)
+		$("#results").html(html);
+		var titleUS= "#" + USCity;
+		$("#titleUS").html(titleUS)
 		
 	}
          
@@ -212,13 +219,13 @@ function instagram(){
 		});
 		$("#results2").append(html2);
 		var titleMex= "#" + MexicoCity
-		$("#titleMex").append(titleMex)
+		$("#titleMex").html(titleMex)
 	}	
 	
 };
 
-function Twitter(USCity, MexicoCity){
-	$('#iframe').src("http://ellencurrin.com/twitterAPI/?USCity=" + USCity + "&?MexicoCity=" + MexicoCity + ".com")
+function twitter(USCity, MexicoCity){
+	$('#iframe').attr('src',"http://ellencurrin.com/twitterAPI/?USCity=" + USCity + "&MexicoCity=" + MexicoCity)
 
 };
 	

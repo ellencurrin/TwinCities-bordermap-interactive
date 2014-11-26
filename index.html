@@ -11,7 +11,7 @@
 
 <!--script src="flickr.js" type="text/javascript"></script-->
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD8-rDoWKzIU34SOp6Qrc1HqTQ8xFlL-8c"></script>
-<!--script type="text/javascript" src="js/googlemap.js"></script-->
+<script type="text/javascript" src="js/bootbox.min.js"></script>
 <script src="js/my.js" type="text/javascript"></script>
 
 <!--My CSS-->
@@ -21,26 +21,53 @@
 
 <body>
 
-<h1>Twin Cities</h1>
+<div class="container">
+    
+
+<div class="heading">
+    <h1 class="bb">Twin Cities</h1>
+    <p style="display: inline">Click on one of the 14 twin cities to explore via social media how the border impacts life.</p>
+    <a href="#" class="dialog" onclick="openDialog()">More info.</a>
+    <p> . . . . . . </p>
+</div>
+
 
 <!--google map api-->
-<div id="map-canvas" style="height: 500px; margin: 2% 5% 2% 5%;"></div>
+<div class="level bb" style="margin-top:-40px; padding: 0px;">
+    <button onclick="initialize()" class="resetBt">Reset Zoom</button>
+    <div id="map-canvas" style="height: 575px; width: 100%; margin-right: -110px; margin-bottom: 75px;"></div>
+</div>
 
 <!--photo api-->
-<div class="photo-row">
+<div class="level bb">
+    <h1>#Instagram</h1>
     <h4 id="titleUS"></h4>
+    <div>
+        <img src="images/chevron-left.png" class="next-left" data-toggle="tooltip" data-placement="top" title="Swipe to scroll!">
+            <img src="images/chevron-right.png" class="next-right" data-toggle="tooltip" data-placement="top" title="Swipe to scroll!">
+    </div>
     <div id="results" class="x-scroll"></div>
-</div>
-<div class="photo-row">
     <h4 id="titleMex"></h4>
+    <div>
+        <img src="images/chevron-left.png" class="next-left" data-toggle="tooltip" data-placement="top" title="Swipe to scroll!">
+        <img src="images/chevron-right.png" class="next-right" data-toggle="tooltip" data-placement="top" title="Swipe to scroll!">
+    </div>
     <div id="results2" class="x-scroll"></div>
 </div>
 
+
 <!--twitter api-->
-<iframe id="iframe" style="width: 80%; height: 800px; margin: 0 10% 0 10%; border: none;"></iframe>
+<div class="level bb">
+    <h1>#Twitter</h1>
+    <iframe id="iframe" style=" width: 100%; height: 800px; border: none;"></iframe>
+</div>
 
 
 <a href="http://jelled.com/instagram/lookup-user-id">Find user id</a>
 
+</div>
+
 </body>
 </html>
+
+

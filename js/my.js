@@ -20,10 +20,12 @@ $(document).ready(function(){
 	console.log("document ready!");
 	loadTwinCities()
 	$('[data-toggle="tooltip"]').tooltip({
-		template: '<div class="tooltip tooltip-custom">	<div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div>'
+		template: '<div class="tooltip tooltip-custom"><div class="tooltip-inner"></div></div>'
         })
 	openDialog();
 });
+
+
 
 function loadTwinCities(data) {
 	$.ajax({
@@ -136,10 +138,10 @@ function initialize() {
 	var i
 	google.maps.event.addListener(marker, 'mouseover', function() {
 		i = this.id
+		html = '<div class="black"><b>' + citiesObj[i].City + '</b> (USA) // <b>' + citiesObj[i+1].City + ' </b> (Mexico) </div>'
 		infowindow = new google.maps.InfoWindow({
-			content: '<p class="black" style="padding: 0; margin: 0;"><b>' + citiesObj[i].City + '</b> (USA) // <b>' + citiesObj[i+1].City + '</b> (Mexico) </p>'
+			content: html
 		});
-		console.log(citiesObj)
 		infowindow.open(map, this);
 	});
 	google.maps.event.addListener(marker, 'mouseout', function() {
@@ -270,7 +272,8 @@ function twitter(USCity, MexicoCity){
 
 function openDialog() {
 	bootbox.dialog({
-		message: '<p style="color: black;"> I am a custom dialog</p>',
+		message: '<p style="color: black;"> The US-Mexico border divides 14 cities into 28 municipalities- half in one country, and half in another. The border is obvious when you look at it on a map, but what effect does it have on the lives of those who live in these severed cities? The Twin Cities project aims to explore this question via social media. </br></br><b>To use this tool:</b> Click on any one of the 14 twin cities on the map to compare Instagram and Twitter content from both sides of the border.  Reset the zoom and explore another pair of municipalities. What things are the same? What things seem different? How is the impact on individual lives the same or different from what is portrayed in the media?</p>',
+
 		title: '<h4 style="color: black;"> About the Twin Cities project. </h4>',
 	})
 }

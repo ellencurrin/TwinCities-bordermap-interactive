@@ -1,0 +1,132 @@
+@font-face{ 
+	font-family: 'curly';
+	src: url('fonts/LeckerliOne-Regular.otf');
+}
+
+h1{font-size: 45px;}
+h3{font-size: 30px;}
+h4{padding: 0px; margin: 0px; font-size: 24px;}
+
+body{
+    background-color: #CC5A1E;
+    color: white;
+    font-family: curly;
+    font-size: 16px;
+}
+
+p, a {
+    font-family: sans-serif;
+    line-height: 1.2;
+    font-size: 14px;
+}
+
+
+.black {
+    color: black;
+}
+
+.dialog {
+    display: inline;
+}
+
+.container {
+    margin-left: 7%;
+    margin-right: 7%;
+    width: 86%;
+    position: absolute;
+}
+
+.heading{
+    max-width: 350px;
+    text-align: center;
+    margin: auto; 
+}
+.map-canvas{
+    position: relative;
+    left: 0px;
+    top: 0px;
+    z-index: 1;    
+}
+
+.resetBt {
+    font-family: curly;
+    font-size: 16px;
+    position: relative;
+    float: right; 
+    left: -5px;
+    top: 50px;
+    z-index: 10;
+    background-color: white;
+    color: black;
+    border-radius: 8px;
+    border: 2px solid #CC5A1E;
+    padding: 10px;
+}
+
+.level {
+    padding-top: 50px;
+    padding-bottom: 75px;
+}
+
+.bb{
+    border-bottom:2px white solid;
+}
+
+.next-left {
+    float: left;
+    height: 60px;
+    position: absolute;
+    margin: 110px 15px;
+    opacity: 0.4;
+    z-index: 10;
+}
+
+.next-left:hover {opacity: 1;}
+
+.next-right {
+    float: right;
+    height: 60px;
+    position: absolute;
+    margin: 110px 15px;
+    left: 93%;
+    opacity: 0.4;
+}
+
+.next-right:hover {opacity: 1;}
+
+.tooltip-custom {
+    border: none;
+    border-radius: 8px;
+    background-color: white;
+    color: black;
+}
+
+.tooltip-arrow{
+    background-color: white;
+    color: white; 
+}
+
+.tooltip-inner{
+    background-color: white;
+    color: black;
+}
+
+.x-scroll {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    height: 250px;
+    white-space:nowrap
+}
+
+
+
+.tooltip { position:absolute;
+	width: 145px;
+	padding: 5px;
+	border: 1px solid gray;
+	font-size: 9pt;
+	font-family: Verdana;
+	background-color: #fff;
+	color: #000;
+}
+

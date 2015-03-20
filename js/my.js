@@ -63,13 +63,13 @@ function initialize() {
 	  "elementType": "geometry",
 	  "stylers": [
 	    { "visibility": "on" },
-	    { "hue": "#00ffb3" }
+	    { "hue": "#ff6e00" }
 	  ]
 	},{
 	  "featureType": "administrative.country",
 	  "elementType": "geometry.stroke",
 	  "stylers": [
-	    { "hue": "#00ff2b" },
+	    { "hue": "#ff6e00" },
 	    { "weight": 1.9 },
 	    { "gamma": 0.92 },
 	    { "lightness": -27 },
@@ -96,7 +96,8 @@ function initialize() {
  
   var mapOptions = {
     zoom: 6,
-    center: new google.maps.LatLng(29.925119, -106.5014018)
+    center: new google.maps.LatLng(29.925119, -106.5014018),
+    scrollwheel: false,
   };
   
   
